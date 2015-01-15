@@ -1,0 +1,79 @@
+
+@import "compass/reset";
+@import "compass/utilities/sprites";
+body{
+	background: #BFBFBF;
+	font-family: 'Open Sans', sans-serif;
+	position: relative;
+}
+header{
+	padding: 15px 0;
+	text-align: center;
+	h1{
+		display: block;
+		font-size: 2em;
+	}
+}
+section{
+	article{
+		border-bottom: 1px solid #9D9D9D;
+		padding: 15px 0;
+	}
+	.phone-img{
+		img{
+			max-width: 100%;
+		}
+	}
+	.phone-display{
+		i{
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url(../img/display-icon.png) 0 0 no-repeat;
+			float: left;
+		}
+		p{
+			float: left;
+		}
+	}
+	.phone-camera{
+		i{
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url(../img/camera.png) 0 0 no-repeat;
+			float: left;
+		}
+		p{
+			float: left;
+		}
+	}
+	.phone-disk{
+		i{
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url(../img/memory-icon.png) 0 0 no-repeat;
+			float: left;
+		}
+		p{
+			float: left;
+		}
+	}
+}
+footer{
+	padding: 7px 0;
+	text-align: center;
+	vertical-align: bottom;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	h1{
+		display: block;
+		font-size: 1.5em;
+	}
+}
+.ui-mobile .ui-page-active{
+	overflow-x: visible;
+}

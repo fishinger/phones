@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<title>Phon</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="vendor/jqm/jquery.mobile-1.4.4.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="vendor/jquery-1.11.1.min.js"></script>
+	<script src="vendor/angular-1.2.26/angular.min.js"></script>
+	<script src="vendor/jqm/jquery.mobile-1.4.4.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/directives.js"></script>
+</head>
+<body ng-app="restApp" ng-controller="phoneListCtrl">
+	<div data-role='page' id='mainPage'>
+		<header id="main-header" class='bg-primary'>
+			<div class="container">
+				<div class="row">
+					<h1>Phone</h1>
+				</div>
+			</div>
+		</header>
+		<div data-role='main'>
+			<div class="container col-lg-12">
+				<section>
+					<article ng-repeat='phone in phones'>
+						<div class="phone-img col-md-3 col-sm-4">
+							<img ng-src="img/phones/{{phone.img}}" alt="">
+						</div>
+						<div class="phone-info col-md-4 col-sm-8">
+							<h2>{{phone.name}}</h2>
+							<p class='phone-discription'>{{phone.about}}</p>
+						</div>
+						<div class="phone-parameters col-md-3 col-sm-4">
+							<div class="phone-display clearfix">
+								<i></i>
+								<p>{{phone.display + "''"}}</p>
+							</div>
+							<div class="phone-camera clearfix">
+								<i></i>
+								<p>{{phone.camera}}</p>
+							</div>
+							<div class="phone-disk clearfix">
+								<i></i>
+								<p>{{phone.disk}}</p>
+								<p>
+									+30ГБ в OneDrive, MicroSD, до 128ГБ
+								</p>
+							</div>
+						</div>
+						<div class="phone-price col-md-2 col-sm-4">
+							<p>{{phone.price}}</p>
+						</div>
+						<div class="clearfix"></div>
+					</article>
+				</section>
+			</div>
+		</div>
+		<footer id="main-footer" class='bg-primary'>
+			<div class="container">
+				<div class="row">
+					<h1>&copy; phone</h1>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
