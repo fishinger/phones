@@ -54,6 +54,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+.param-sprite, section .phone-parameters .phone-display i, section .phone-parameters .phone-camera i, section .phone-parameters .phone-disk i {
+  background-image: url('/img/param-s10d5df5fd1.png');
+  background-repeat: no-repeat;
+}
+
 body {
   background: #BFBFBF;
   font-family: 'Open Sans', sans-serif;
@@ -76,35 +81,75 @@ section article {
 section .phone-img img {
   max-width: 100%;
 }
-section .phone-display i {
+section .phone-info h2 {
+  font-size: 1.6em;
+  color: #008ACC;
+  margin-bottom: 12px;
+}
+section .phone-info p {
+  line-height: 1.2em;
+  color: #464646;
+}
+section .phone-parameters .phone-display {
+  margin-bottom: 12px;
+}
+section .phone-parameters .phone-display i {
   display: block;
   width: 32px;
   height: 32px;
-  background: url(../img/display-icon.png) 0 0 no-repeat;
+  background: url(../img/param-s10d5df5fd1.png);
+  background-position: 0 -64px;
+  height: 32px;
+  width: 32px;
   float: left;
 }
-section .phone-display p {
+section .phone-parameters .phone-display p {
   float: left;
+  margin-left: 12px;
+  padding-top: 10px;
 }
-section .phone-camera i {
+section .phone-parameters .phone-camera {
+  margin-bottom: 12px;
+}
+section .phone-parameters .phone-camera i {
   display: block;
   width: 32px;
   height: 32px;
-  background: url(../img/camera.png) 0 0 no-repeat;
+  background: url(../img/param-s10d5df5fd1.png);
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
   float: left;
 }
-section .phone-camera p {
+section .phone-parameters .phone-camera p {
   float: left;
+  margin-left: 12px;
+  padding-top: 10px;
 }
-section .phone-disk i {
+section .phone-parameters .phone-disk {
+  margin-bottom: 12px;
+}
+section .phone-parameters .phone-disk i {
   display: block;
   width: 32px;
   height: 32px;
-  background: url(../img/memory-icon.png) 0 0 no-repeat;
+  background: url(../img/param-s10d5df5fd1.png);
+  background-position: 0 -32px;
+  height: 32px;
+  width: 32px;
   float: left;
 }
-section .phone-disk p {
+section .phone-parameters .phone-disk p {
   float: left;
+  margin-left: 12px;
+  padding-top: 10px;
+}
+section .phone-disk__plus {
+  font-size: 0.9em;
+}
+section .phone-price p {
+  font-size: 1.6em;
+  color: #008ACC;
 }
 
 footer {

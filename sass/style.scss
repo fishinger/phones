@@ -1,6 +1,8 @@
 
 @import "compass/reset";
 @import "compass/utilities/sprites";
+@import "param/*.png";
+
 body{
 	background: #BFBFBF;
 	font-family: 'Open Sans', sans-serif;
@@ -14,6 +16,7 @@ header{
 		font-size: 2em;
 	}
 }
+$param-sprite-dimensions: true;
 section{
 	article{
 		border-bottom: 1px solid #9D9D9D;
@@ -24,40 +27,45 @@ section{
 			max-width: 100%;
 		}
 	}
-	.phone-display{
-		i{
-			display: block;
-			width: 32px;
-			height: 32px;
-			background: url(../img/display-icon.png) 0 0 no-repeat;
-			float: left;
+	.phone-info{
+		h2{
+			font-size: 1.6em;
+			color: #008ACC;
+			margin-bottom: 12px;
 		}
 		p{
-			float: left;
+			line-height: 1.2em;
+			color: #464646;
 		}
 	}
-	.phone-camera{
-		i{
-			display: block;
-			width: 32px;
-			height: 32px;
-			background: url(../img/camera.png) 0 0 no-repeat;
-			float: left;
-		}
-		p{
-			float: left;
+
+	.phone-parameters{
+		@each $item in 'phone-display', 'phone-camera', 'phone-disk'{
+			.#{$item}{
+				margin-bottom: 12px;
+				i{
+					display: block;
+					width: 32px;
+					height: 32px;
+					background: url(../img/param-s10d5df5fd1.png);
+					@include param-sprite(#{$item});
+					float: left;
+				}
+				p{
+					float: left;
+					margin-left: 12px;
+					padding-top: 10px;
+				}
+			}
 		}
 	}
-	.phone-disk{
-		i{
-			display: block;
-			width: 32px;
-			height: 32px;
-			background: url(../img/memory-icon.png) 0 0 no-repeat;
-			float: left;
-		}
+	.phone-disk__plus{
+		font-size: 0.9em;
+	}
+	.phone-price{
 		p{
-			float: left;
+			font-size: 1.6em;
+			color: #008ACC;
 		}
 	}
 }

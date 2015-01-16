@@ -19,7 +19,7 @@
 		<header id="main-header" class='bg-primary'>
 			<div class="container">
 				<div class="row">
-					<h1>Phones</h1>
+					<h1>Phone</h1>
 				</div>
 			</div>
 		</header>
@@ -27,7 +27,7 @@
 			<div class="container col-lg-12">
 				<section>
 					<article ng-repeat='phone in phones'>
-						<div class="phone-img col-md-3 col-sm-4">
+						<div class="phone-img col-md-2 col-sm-4">
 							<img ng-src="img/phones/{{phone.img}}" alt="">
 						</div>
 						<div class="phone-info col-md-4 col-sm-8">
@@ -41,17 +41,17 @@
 							</div>
 							<div class="phone-camera clearfix">
 								<i></i>
-								<p>{{phone.camera}}</p>
+								<p>{{phone.camera + " Мп"}}</p>
 							</div>
 							<div class="phone-disk clearfix">
 								<i></i>
-								<p>{{phone.disk}}</p>
-								<p>
+								<p>{{phone.disk + " ГБ"}}</p>
+								<p class='phone-disk__plus'>
 									+30ГБ в OneDrive, MicroSD, до 128ГБ
 								</p>
 							</div>
 						</div>
-						<div class="phone-price col-md-2 col-sm-4">
+						<div class="phone-price col-md-3 col-sm-4">
 							<p>{{phone.price}}</p>
 						</div>
 						<div class="clearfix"></div>
