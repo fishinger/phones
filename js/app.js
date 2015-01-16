@@ -12,6 +12,10 @@ var restApp = angular.module( 'restApp', [] )
 				deferred.reject('Error url json')
 			})
 			return deferred.promise;
+		},
+		getFilterPrice: function(price){
+			var newFiltPrice = price.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+			return newFiltPrice
 		}
 	}
 }])
@@ -23,4 +27,5 @@ var restApp = angular.module( 'restApp', [] )
 	phoneListFactory.getPhoneList().then(function(listObj){
 		$scope.phones = listObj.list;
 	})
+	
 }])
