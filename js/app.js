@@ -15,7 +15,7 @@ var restApp = angular.module( 'restApp', [] )
 		},
 		getFilterPrice: function(price){
 			var newFiltPrice = price.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-			return newFiltPrice
+			return newFiltPrice;
 		}
 	}
 }])
@@ -27,5 +27,5 @@ var restApp = angular.module( 'restApp', [] )
 	phoneListFactory.getPhoneList().then(function(listObj){
 		$scope.phones = listObj.list;
 	})
-	
+
 }])
