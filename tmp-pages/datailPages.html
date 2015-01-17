@@ -1,0 +1,33 @@
+<div id="phoneDetail" data-role='page'>
+	<div data-role='header'>
+		<h1>{{itemPhone.name}}</h1>
+	</div>
+	<div data-role='main' class='detail-main'>
+		<div class="slider">
+			<img ng-src="img/phones/{{itemPhone.img}}" alt="">
+		</div>
+		<div class="detail-info conteiner">
+			<div class="datail-display col-sm-6">
+				<p>{{itemPhone.display + "''"}}</p>
+				<span>Дисплей</span>
+			</div>
+			<div class="datail-camera col-sm-6">
+				<p>{{itemPhone.camera + '.0Мп'}}</p>
+				<span>Основная камера</span>
+			</div>
+			<div class="datail-disk col-sm-6">
+				<p>{{itemPhone.disk + ' ' + 'Гб'}}</p>
+				<span>Встроенная память</span>
+			</div>
+			<div class="datail-inter col-sm-6">
+				<p>{{itemPhone.internet}}</p>
+				<span>Сеть</span>
+			</div>
+			<div class="datail-price col-sm-6">
+				<p>{{itemPhone.price + ' ' + currency}}</p>
+				<span>Цена</span>
+			</div>
+		</div>
+	</div>
+	
+</div>

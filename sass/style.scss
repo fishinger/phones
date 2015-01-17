@@ -3,6 +3,8 @@
 @import "compass/utilities/sprites";
 @import "param/*.png";
 
+$color-h: #008ACC;
+$color-p: #464646;
 body{
 	background: #BFBFBF;
 	font-family: 'Open Sans', sans-serif;
@@ -69,6 +71,32 @@ section{
 		}
 	}
 }
+/*-----------*/
+.detail-main{
+	.slider{
+		text-align: center;
+		img{
+			display: inline;
+		}
+	}
+	.detail-info{
+		&[class*='detail']{
+			text-align: center;
+			margin-top: 20px;
+			p{
+				color: $color-h;
+				font-size: 2em;
+				text-align: center;
+				line-height: 1.2em;
+				margin-top: 20px;
+			}
+			span{
+				color: $color-p;
+			}
+		}
+	}
+}
+
 footer{
 	padding: 7px 0;
 	text-align: center;

@@ -152,6 +152,28 @@ section .phone-price p {
   color: #008ACC;
 }
 
+/*-----------*/
+.detail-main .slider {
+  text-align: center;
+}
+.detail-main .slider img {
+  display: inline;
+}
+.detail-main .detail-info[class*='detail'] {
+  text-align: center;
+  margin-top: 20px;
+}
+.detail-main .detail-info[class*='detail'] p {
+  color: #008ACC;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.2em;
+  margin-top: 20px;
+}
+.detail-main .detail-info[class*='detail'] span {
+  color: #464646;
+}
+
 footer {
   padding: 7px 0;
   text-align: center;

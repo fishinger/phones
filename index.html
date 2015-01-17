@@ -26,7 +26,7 @@
 		<div data-role='main'>
 			<div class="container col-lg-12">
 				<section>
-					<article ng-repeat='phone in phones'>
+					<article ng-repeat='phone in phones' ng-click='openDetail(phone)'>
 						<div class="phone-img col-md-2 col-sm-4">
 							<img ng-src="img/phones/{{phone.img}}" alt="">
 						</div>
@@ -67,5 +67,6 @@
 			</div>
 		</footer>
 	</div>
+	<detail-pages></detail-pages>
 </body>
 </html>
