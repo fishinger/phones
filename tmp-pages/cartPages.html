@@ -1,0 +1,17 @@
+<div data-role='page' id='cartPage'>
+	<div data-role='header'>
+		<h1>Корзина</h1>
+		<a href="#mainPage" class='btn btn-default'>В меню</a>
+	</div>
+	<div data-role='main' class='container'>
+		<div class="row">
+			<article ng-repeat='item in cartPhones'>
+				<h2>{{item.name}}</h2>
+				<p>Цена: {{item.price}}</p>
+			</article>
+		</div>
+		<div class="row">
+			<h2>Итого: {{countPrice}}</h2>
+		</div>
+	</div>
+</div>

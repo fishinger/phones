@@ -38,7 +38,33 @@ var restApp = angular.module( 'restApp', [] )
 		}
 	}
 }])
-
+.factory('cartFactory', [function(){
+	var cart = [];
+	return {
+		getLengthCart: function(){
+			return cart.length
+		},
+		addToCart: function(phone){
+			var newPhone = {};
+			newPhone.name = phone.name;
+			newPhone.id = phone.id;
+			newPhone.price = phone.price;
+			cart.push(newPhone)
+		},
+		getCart: function(){
+			return cart
+		},
+		getTotal: function(){
+			var total = 0;
+			if(cart.length > 0){
+				for(var i = 0; i < cart.length; i++){
+					total += cart[i].price;
+				}
+			}
+			return total
+		}
+	}
+}])
 .controller( 'mainCtrl', [ '$scope', function( $scope ){
 	
 }])

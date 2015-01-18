@@ -1,0 +1,4 @@
+<select name="widgetsMultiple" id="widgetsMultiple" multiple='multiple' data-native-menu='false'>
+	<option value="">Комплектания</option>
+	<option ng-repeat='item in complects' value="{{$index}}">{{item.name + ' ' + item.price}}</option>
+</select>
